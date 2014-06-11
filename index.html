@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<script language="javascript">
+function Hipotenusa(){
+	
+cat_ady=prompt("escribe el cateto adyacente:");
+while((cat_ady<=0 || cat_ady=="ñ" || cat_ady=="Ñ")|| ((cat_ady>="a")&&(cat_ady<="z")) || ((cat_ady>="A")&&(cat_ady<="Z")))
+{
+	cat_ady=prompt("escribe el cateto adyacente:");
+}
+cat_op=prompt("escribe el cateto opuesto");
+while((cat_op==0 || cat_op<1 || cat_op=="ñ" || cat_op=="Ñ") ||((cat_op>="a")&&(cat_op<="z")) || ((cat_op>="A")&&(cat_op<="Z")))
+{
+	cat_op=prompt("escribe el cateto opuesto");
+}
+if((cat_ady<=0)||(cat_op<=0)) 
+{
+   
+}
+else
+{
+hipo=((cat_ady*cat_ady)+(cat_op*cat_op));
+resul=Math.sqrt(hipo);
+alert("la hipotenusa es: " + resul);
+}
+}
+
+function Cateto_Adyacente() {
+	hipo=prompt("escribe la hipotenusa:");
+while((hipo<=0 || hipo=="ñ" || hipo=="Ñ") ||((hipo>="a")&&(hipo<="z")) || ((hipo>="A")&&(hipo<="Z")))
+{
+	hipo=prompt("escribe la hipotenusa:");
+}
+cat_op=prompt("escribe el cateto opuesto");
+while((cat_op<=0 || cat_op>=hipo || cat_op=="ñ" || cat_op=="Ñ") ||((cat_op>="a")&&(cat_op<="z")) || ((cat_op>="A")&&(cat_op<="Z")))
+{
+	cat_op=prompt("escribe el cateto opuesto");
+}
+if((hipo<=0)||(cat_op<=0))
+{
+   alert("No se admiten ceros, ni Numeros Negativos");	
+}
+else
+{
+cat_ad=((hipo*hipo)-(cat_op*cat_op));
+resul=Math.sqrt(cat_ad);
+alert("el cateto adyacente es: " + resul);
+}
+}
+
+function Cateto_Opuesto(){
+	cat_ad=prompt("escribe el cateto adyacente:");
+while((cat_ad<=0 || cat_ad=="ñ" || cat_ad=="Ñ")||((cat_ad>="a")&&(cat_ad<="z")) || ((cat_ad>="A")&&(cat_ad<="Z")))
+{
+	cat_ad=prompt("escribe el cateto adyacente:");
+}
+hipo=prompt("escribe la hipotenusa:");
+while((hipo<=cat_ad || hipo<=0) ||((hipo>="a")&&(hipo<="z")) || ((hipo>="A")&&(hipo<="Z")) || ((hipo=="ñ")&&(hipo=="Ñ")))
+{
+	hipo=prompt("escribe la hipotenusa:");
+}
+if((hipo<=0 || hipo=="ñ" || hipo=="Ñ")||(cat_ad<=0))
+{
+   alert("No se admiten ceros, ni Numeros Negativos");	
+}
+else
+{
+cat_op=((hipo*hipo)-(cat_ad*cat_ad));
+resul=Math.sqrt(cat_op);
+alert("el cateto opuesto es: " + resul);
+}
+}
+</script>
+
+<style type="text/css">
+H1{
+	font-family:"Comic Sans MS", cursive; /*  */
+	font-size:60px;
+	text-align:center;
+	color:#0F0;
+	text-shadow: 1px 1px 3px rgb(0,0,0);
+}
+
+H3{
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size:20px;
+	text-align:center;
+	color:#0F0;
+	text-shadow: 1px 1px 3px rgb(0,0,0);
+}
+body{
+	background-color:#FF0;
+}
+
+input{
+		display: block;
+		margin: 15px auto;
+		background-color: white;
+		color: navy;
+		font-family: Segeo Print;
+		font-size: 20px;
+		font-weight: bold;
+		border-radius: 5px;
+		width:90px;
+		height:35px;
+
+}
+</style>
+<meta charset="utf-8">
+<title>Docu</title>
+<h1> Que Deseas Calcular</h1>
+<h3>1.- Hipotenusa</h3>
+<p align="center"> <img src="tu4.png"> </p>
+<input type="button" value="Calcular" onClick="Hipotenusa();"/>
+
+<h3>2.- Cateto Adyacente</h3>
+<p align="center"> <img src="tu3.png"> </p>
+<input type="button" value="Calcular" onClick="Cateto_Adyacente();"/>
+
+<h3>3.- Cateto Opuesto</h3>
+<p align="center"> <img src="tu5.png"> </p>
+<input type="button" value="Calcular" onClick="Cateto_Opuesto();"/>
+
+</head>
+<body>
+
+</body>
+</html>
